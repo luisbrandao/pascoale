@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'spec_helper'
 
 describe Reflector do
@@ -14,6 +15,8 @@ describe Reflector do
       expect(Reflector.new('ideia')).to be_paroxytone
       expect(Reflector.new('assembleia')).to be_paroxytone
       expect(Reflector.new('heroico')).to be_paroxytone
+      expect(Reflector.new('variável')).to be_paroxytone
+      expect(Reflector.new('prováveis')).to be_paroxytone
     end
   end
 
@@ -32,6 +35,9 @@ describe Reflector do
       expect(Reflector.new('ruim')).to be_oxytone
       expect(Reflector.new('condor')).to be_oxytone
       expect(Reflector.new('anzol')).to be_oxytone
+      expect(Reflector.new('variável')).not_to be_oxytone
+      expect(Reflector.new('prováveis')).not_to be_oxytone
+      expect(Reflector.new('ámavel')).not_to be_oxytone
     end
   end
 
